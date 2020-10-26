@@ -15,10 +15,12 @@ const appi = new Clarifai.App({
 const dbs = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+  	connectionString : process.env.DATABASE_URL,
+  	ssl : true
+   /* host : '127.0.0.1',
     user : 'postgres',
     password : 'tomer',
-    database : 'face-ai'
+    database : 'face-ai'*/
   }
 });
 /*
