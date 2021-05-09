@@ -33,44 +33,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cors());
 
-const db = {
-	users : [
-	{
-		id: '7371',
-		name: 'mike',
-		email: 'a',
-		password : 'b',
-		entries : 0,
-		joined : new Date()
-	},
-	{
-		id: '123',
-		name: 'john',
-		email: 'jhon@gmail.com',
-		password : 'cookies',
-		entries : 0,
-		joined : new Date()
-	},
-
-	{
-		id: '124',
-		name: 'mike',
-		email: 'mike@gmail.com',
-		password : 'bananas',
-		entries : 0,
-		joined : new Date()
-	},
-	{
-		id: '21',
-		name: 'mike',
-		email: 'mike@gmail.com',
-		password : 'bananas',
-		entries : 0,
-		joined : new Date()
-	}
-	]
-}
-
 app.get('/', (req, res) => {
 	/*res.send(dbs.users);*/
 	res.send('its working i think');
